@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: cassandra
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: cassandra
+        type: nosql-db
+  template:
+    metadata:
+      labels:
+        app: cassandra
+        type: nosql-db
+    spec:
+      containers:
+      - name: cassandra
+        image: bitnami/cassandra:latest
+        ports:
+        - containerPort: 9042
