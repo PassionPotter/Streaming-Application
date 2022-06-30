@@ -24,8 +24,7 @@ This sample data we will be using is referred from IMDb which is an online datab
 	* zookeeper-deploy : deployment of zookeeper orchestration for kafka brokers		
 	* kafka-broker0 : deployment of kafka distributed message queue
 		
-        - Note: deployment file ..\kafka-on-kubernetes\kafka-deployment.yaml, checked-in with placeholder value for the property "KAFKA_ADVERTISED_HOST_NAME" 
-	        has been added , one has to replace the valid ip address such as load balancer ip or one of the node in kubernetes cluster.
+        - Note: deployment file ..\kafka-on-kubernetes\kafka-deployment.yaml, checked-in with placeholder **${LOADBALANCER_IP}** value for the property "KAFKA_ADVERTISED_HOST_NAME" has been added , one has to replace the valid ip address such as load balancer ip or one of the node in kubernetes cluster.
 
         - create kafka topics :
 
@@ -207,8 +206,7 @@ Steps:
     
         	kubectl create -f ../K8s/standalone-flink-job/kafka-source-flink-consumer-titles-job.yaml
 
-7. Flink Dashboad with Standalone Job running will be available on 
-    ${LOADBALANCER_IP}/8081/#/overview 
+7. Flink Dashboad with Standalone Job running will be available on ***http://${LOADBALANCER_IP}:8081/#/overview***
 
 
 
