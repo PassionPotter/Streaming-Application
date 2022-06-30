@@ -1,0 +1,68 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: flink-jobmanager
+#  namespace: kafka
+spec:
+  template:
+    metadata:
+      labels:
+        app: flink
+        component: jobmanager
+    spec:
+      restartPolicy: OnFailure
+      hostname: flink-jobmanager
+      volumes:
+        - name: flink-config-volume
+          configMap:
+            name: flink-config
+            items:
+              - key: flink-conf.yaml
+                path: flink-conf.yaml
+              - key: log4j-console.properties
+                path: log4j-console.properties
+      containers:
+        - name: jobmanager
+          image: flinkwithtitles:t2
+          imagePullPolicy: IfNotPresent # Always/IfNotPresent
+          env: 
+          - name : KAFKA_SERVER_IP
+            value: ${LOADBALANCER_IP}
+          - name : KAFKA_SERVER_PORT
+            value: "9092"
+          - name : KAFKA_TOPIC_TITLE_BASIC
+            value: tbasic4
+          - name : KAFKA_TOPIC_TITLE_RATING
+            value: trating4
+          - name : CASSANDRA_HOST
+            value: ${LOADBALANCER_IP}
+          - name : CASSANDRA_PORT
+            value: "9042"
+          - name : CASSANDRA_UNAME
+            value: "cassandra"
+          - name : CASSANDRA_PASS
+            value: "cassandra"         
+          # args: ["standalone-job", "--job-classname", "org.sense.flink.App", "-app", "36"] #, <optional arguments>, <job arguments>] # optional arguments: ["--job-id", "<job id>", "--fromSavepoint", "/path/to/savepoint", "--allowNonRestoredState"]
+          #args: ["standalone-job", "--job-classname", "org.sense.flink.App", "-app", "37", "-input", "kafka", "-bootstrap.servers", "10.111.85.76:9092", "-topic", "my-topic"]
+          args: ["standalone-job", "--job-classname", "com.learn.flink.kafka_flink_consumers.TitlesCassandraSink"]                    
+          #args: ["jobmanager"]
+          ports:
+            - containerPort: 6123
+              name: rpc
+            - containerPort: 6124
+              name: blob-server
+            - containerPort: 8081
+              name: webui
+            - containerPort: 9250
+            - containerPort: 9042
+            - containerPort: 9092              
+          livenessProbe:
+            tcpSocket:
+              port: 6123
+            initialDelaySeconds: 30
+            periodSeconds: 60
+          volumeMounts:
+            - name: flink-config-volume
+              mountPath: /opt/flink/conf
+          securityContext:
+            runAsUser: 9999  # refers to user _flink_ from official flink image, change if necessary

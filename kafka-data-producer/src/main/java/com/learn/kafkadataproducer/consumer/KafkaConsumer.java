@@ -14,7 +14,7 @@ import com.learn.models.TitleBasic;
 public class KafkaConsumer {
 	private static final Logger logger= LoggerFactory.getLogger(KafkaConsumer.class);
 
-	@KafkaListener(groupId=("${kafka.topic.title.basic.groupId.prefix}"),containerFactory=ApplicationConstants.KAFKA_LISTENER_CONTAINER_FACTORY,topics=("${kafka.topic.title.basic.name}"))
+	@KafkaListener(groupId=("${kafka.topic.title.basic.groupId.prefix}"),containerFactory=ApplicationConstants.TITLE_BASIC_KAFKA_LISTENER_CONTAINER_FACTORY,topics=("${kafka.topic.title.basic.name}"))
 	public void receiveMessage(TitleBasic msg) {
 		logger.info("Message Received using Kafka Listener " + msg);
 	}
