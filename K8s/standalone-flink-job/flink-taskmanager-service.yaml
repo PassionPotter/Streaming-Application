@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flink-taskmanager
+#  namespace: kafka
+  labels:
+    app: flink-taskmanager
+spec:
+  #clusterIP: None # type: ClusterIP
+  type: LoadBalancer
+  ports:
+  - name: prometheus
+    port: 9250
+  selector:
+    app: flink-taskmanager
