@@ -17,5 +17,6 @@ spec:
       containers:
       - name: cassandra
         image: bitnami/cassandra:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9042

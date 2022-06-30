@@ -16,7 +16,7 @@ public class ApplicationConstants {
 		ApplicationConstants.KAFKA_LOCAL_SERVER_CONFIG=value;
 	}
 	
-	
+	//TitleBasic
 	
 	public static  String TITLE_BASIC_GROUP_ID;
 	
@@ -44,8 +44,32 @@ public class ApplicationConstants {
 	}
 	
 	
+	// TitleRating
+	
+	public static  String TITLE_RATING_GROUP_ID;
+	
+	@Value("${kafka.topic.title.rating.groupId.prefix}")
+	public void  setTitleRatingGroupIdPrefix(String value) {
+		ApplicationConstants.TITLE_RATING_GROUP_ID=value;
+	}
+	
+	public static  String TITLE_RATING_TOPIC_NAME;
+	
+	@Value("${kafka.topic.title.rating.name}")
+	public void  setTitleRatingTopicName(String value) {
+		ApplicationConstants.TITLE_RATING_TOPIC_NAME=value;
+	}
+	
+	
+	
+	public static String TITLE_RATING_TSV_FILE_SOURCE_PATH;
+	
+	@Value("${kafka.topic.title.rating.tsvFile.Path}")
+	public void  setTitleRatingTsvFilePath(String value) {
+		ApplicationConstants.TITLE_RATING_TSV_FILE_SOURCE_PATH=value;
+	}
 	
 	public static final String TITLE_BASIC_KAFKA_LISTENER_CONTAINER_FACTORY="tBasicKafkaListenerContainerFactory";
-	public static final String KAFKA_LISTENER_CONTAINER_FACTORY="titleBasicKafkaListenerContainerFactory";
+	
 	
 }

@@ -16,9 +16,10 @@
 	</dependency>
 
 	<dependency>
-    	<groupId>org.apache.flink</groupId>
-    	<artifactId>flink-connector-cassandra_2.12</artifactId>
-    	<version>${flink.version}</version>
-	</dependency>
+  <groupId>com.datastax.cassandra</groupId>
+  <artifactId>cassandra-driver-mapping</artifactId>
+  <version>3.1.4</version>
+</dependency>
+
 </dependencies>
 </project>

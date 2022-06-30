@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.supercsv.cellprocessor.Optional;
-import org.supercsv.cellprocessor.ParseBool;
-import org.supercsv.cellprocessor.ParseInt;
+import org.supercsv.cellprocessor.ParseDouble;
+import org.supercsv.cellprocessor.ParseLong;
 import org.supercsv.cellprocessor.constraint.NotNull;
 import org.supercsv.cellprocessor.constraint.StrRegEx;
 import org.supercsv.cellprocessor.ift.BoolCellProcessor;
@@ -22,38 +21,38 @@ import org.supercsv.io.ICsvBeanReader;
 import org.supercsv.prefs.CsvPreference;
 
 import com.learn.kafkadataproducer.constants.ApplicationConstants;
-import com.learn.models.TitleBasic;
+import com.learn.models.TitleRating;
 
 @RestController
 @RequestMapping("/produce")
-public class TitleBasicProducer implements BasicProducer<TitleBasic> {
+public class TitleRatingProducer implements BasicProducer<TitleRating> {
 
 	@Autowired
-	private KafkaTemplate<String, TitleBasic> tBasicProducerKafkaTemplate;
+	private KafkaTemplate<String, TitleRating> tRatingProducerKafkaTemplate;
 
 	@Override
-	@PostMapping("/title/basic")
-	public String sendMessage(@RequestBody TitleBasic titleBasic) {
-		tBasicProducerKafkaTemplate.send(ApplicationConstants.TITLE_BASIC_TOPIC_NAME, titleBasic.getTconst(),
-				titleBasic);
-		return "Title Basic Sent Successfully";
+	@PostMapping("/title/rating")
+	public String sendMessage(@RequestBody TitleRating titleRating) {
+		tRatingProducerKafkaTemplate.send(ApplicationConstants.TITLE_RATING_TOPIC_NAME, titleRating.getTconst(),
+				titleRating);
+		return "Title Rating Sent Successfully";
 	}
 
 	@Override
-	@PostMapping("/title/basic/all")
+	@PostMapping("/title/rating/all")
 	public String sendAllMessage() {
 
-		try (ICsvBeanReader beanReader = new CsvBeanReader(new FileReader(ApplicationConstants.TITLE_BASIC_TSV_FILE_SOURCE_PATH),
+		try (ICsvBeanReader beanReader = new CsvBeanReader(new FileReader(ApplicationConstants.TITLE_RATING_TSV_FILE_SOURCE_PATH),
 				CsvPreference.TAB_PREFERENCE)) {
 			// the header elements are used to map the values to the bean
 			final String[] headers = beanReader.getHeader(true);
 			// final String[] headers = new
 			final CellProcessor[] processors = getCellProcessor();
 
-			TitleBasic titleBasic;
-			while ((titleBasic = beanReader.read(TitleBasic.class, headers, processors)) != null) {
-				tBasicProducerKafkaTemplate.send(ApplicationConstants.TITLE_BASIC_TOPIC_NAME, titleBasic.getTconst(),
-						titleBasic);
+			TitleRating titleRating;
+			while ((titleRating = beanReader.read(TitleRating.class, headers, processors)) != null) {
+				tRatingProducerKafkaTemplate.send(ApplicationConstants.TITLE_RATING_TOPIC_NAME, titleRating.getTconst(),
+						titleRating);
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -61,7 +60,7 @@ public class TitleBasicProducer implements BasicProducer<TitleBasic> {
 			e.printStackTrace();
 		}
 
-		return "All Title Basics Sent Successfully";
+		return "All Title Ratings Sent Successfully";
 	}
 
 	@Override
@@ -69,15 +68,10 @@ public class TitleBasicProducer implements BasicProducer<TitleBasic> {
 		final String emailRegex = "[a-z0-9\\._]+@[a-z0-9\\.]+";
 		StrRegEx.registerMessage(emailRegex, "must be a valid email address");
 
-		final BoolCellProcessor[] processors = new BoolCellProcessor[] { new NotNull(), // tconst
-				new NotNull(), // titleType
-				new NotNull(), // primaryTitle
-				new NotNull(), // originalTitle
-				new NotNull(new ParseBool()), // isAdult
-				new NotNull(new ParseInt()), // startYear
-				new Optional(), // endYear
-				new NotNull(new ParseInt()), // runtimeMinutes
-				new NotNull(), // genres
+		final BoolCellProcessor[] processors = new BoolCellProcessor[] { new NotNull(), // tconst				
+				new NotNull(new ParseDouble()), // avgRating
+				new NotNull(new ParseLong()), // numVotes
+				
 		};
 		return processors;
 	}

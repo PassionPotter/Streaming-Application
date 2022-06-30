@@ -4,10 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.OffsetResetStrategy;
-import org.apache.kafka.common.serialization.IntegerDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
-import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -44,7 +41,7 @@ public class TitleBasicConsumerConfig {
 	}
 
 	@Bean
-	public ConcurrentKafkaListenerContainerFactory<String, TitleBasic> titleBasicKafkaListenerContainerFactory() {
+	public ConcurrentKafkaListenerContainerFactory<String, TitleBasic> tBasicKafkaListenerContainerFactory() {
 		ConcurrentKafkaListenerContainerFactory<String, TitleBasic> conccKafkaListContFac = new ConcurrentKafkaListenerContainerFactory<String, TitleBasic>();
 		conccKafkaListContFac.setConsumerFactory(customerConsumerFactory());
 		return conccKafkaListContFac;

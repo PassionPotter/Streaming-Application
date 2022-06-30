@@ -1,20 +1,45 @@
 package com.learn.models;
 
-import java.io.Serializable;
-
+import com.datastax.driver.mapping.annotations.ClusteringColumn;
+import com.datastax.driver.mapping.annotations.Column;
+import com.datastax.driver.mapping.annotations.PartitionKey;
+import com.datastax.driver.mapping.annotations.Table;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class TitleBasic implements Serializable {
-	/**
-		 * 
-		 */
-	private static final long serialVersionUID = 1L;
-	String tconst, titleType, primaryTitle, originalTitle;
+@Table(keyspace = "example", name = "tbasic1")
+
+public class TitleBasic {
+	
+	@Column(name = "tconst")
+	String tconst;
+
+	@PartitionKey(value = 0)
+	@Column(name = "titleType")
+	String titleType;
+
+	@ClusteringColumn(value = 0)
+	@Column(name = "primaryTitle")
+	String primaryTitle;
+
+	@Column(name = "originalTitle")
+	String originalTitle;
+
+	@Column(name = "adult")
 	boolean adult;
+	
+	@ClusteringColumn(value = 1)
+	@Column(name = "startYear")
 	int startYear;
+
+	@Column(name = "endYear")
 	String endYear;
+
+	@Column(name = "runtimeMinutes")
 	int runtimeMinutes;
+
+	@PartitionKey(value = 1)
+	@Column(name = "genres")
 	String genres;
 
 	public String getTconst() {
@@ -57,7 +82,10 @@ public class TitleBasic implements Serializable {
 		this.adult = isAdult;
 	}
 
-	
+	public void setAdult(boolean isAdult) {
+		this.adult = isAdult;
+	}
+
 	public int getRuntimeMinutes() {
 		return runtimeMinutes;
 	}
@@ -106,6 +134,7 @@ public class TitleBasic implements Serializable {
 	public void setEndYear(String endYear) {
 		this.endYear = endYear;
 	}
+
 	@Override
 	public String toString() {
 		try {

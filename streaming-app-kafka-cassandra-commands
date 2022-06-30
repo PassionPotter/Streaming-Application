@@ -1,0 +1,74 @@
+Kafka:
+
+	list topics:
+		kafka-topics.bat --list --zookeeper localhost:2181
+	
+	create topics:
+
+		kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tbasic4
+		kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic trating4
+
+	console-consumer :
+		kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic tbasic4 --from-beginning
+		kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic trating4 --from-beginning
+
+
+
+
+cassandra:
+
+		create keyspace:
+			CREATE KEYSPACE result WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+			CREATE KEYSPACE example WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+		
+		create table:				
+
+			CREATE TABLE IF NOT EXISTS example.tbasic1 (
+   				tconst text,
+				titleType text,
+				primaryTitle text,
+				originalTitle text,
+				adult boolean,
+				startYear int,
+   				endYear text,
+				runtimeMinutes int,
+				genres text,
+   				PRIMARY KEY((titleType,genres),startYear,primaryTitle)
+    		);
+
+			CREATE TABLE IF NOT EXISTS example.trating1 (
+   				tconst text,
+				averageRating double,
+				numVotes bigint,   				
+   				PRIMARY KEY(averageRating)
+    		);
+
+
+			CREATE TABLE result.basicwithrating1 (
+				titleType text,
+				primaryTitle text,
+				adult boolean,
+				startYear int,
+				genres text,
+				averageRating double,
+				numVotes bigint,
+ 				PRIMARY KEY ((titleType, startYear,averageRating),genres)
+			);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
