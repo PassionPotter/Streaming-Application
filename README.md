@@ -208,7 +208,7 @@ Steps:
         	kubectl create -f ../K8s/standalone-flink-job/kafka-source-flink-consumer-titles-job.yaml
 
 7. Flink Dashboad with Standalone Job running will be available on 
-    ${LOADBALANCER_IP}/8081/#/overview 
+    http://${LOADBALANCER_IP}/8081/#/overview 
 
 
 
