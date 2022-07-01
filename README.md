@@ -97,7 +97,7 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
    
    * cassandra running with keyspace and tables created
 
-Steps:
+## 5. Steps: ##
 
 1. create K8's Services 
 
@@ -209,10 +209,38 @@ Steps:
 7. Flink Dashboad with Standalone Job running will be available on ***http://${LOADBALANCER_IP}:8081/#/overview***
 
 
+## 6. Execution Results ##
+
+* Kafka Records
+	
+	 -  tbasic4 
+	    
+	    ![kafka-consumer-tbasic4](https://user-images.githubusercontent.com/25034326/176841910-55ae02b7-41b6-4ef8-824f-a9f448c079c1.JPG)
+	    
+	 -  trating4 
+	    
+	    ![kafka-consumer-trating4](https://user-images.githubusercontent.com/25034326/176842929-2a533774-08a0-4ae2-b0a5-46bbb4eb1f35.JPG)
+
+	
+* Flink Dashboard
+	
+	- Data Flow From streaming Job
+	 
+	 ![Flink-DataFlow-Graph](https://user-images.githubusercontent.com/25034326/176843198-58c075c3-a41f-4631-8b9a-d6475a2a5723.JPG)
 
 
-    
-    
-
+* Cassandra Result
+	
+   	- tbasic1  
+   	
+   	 ![cassandra-query-tbasic1](https://user-images.githubusercontent.com/25034326/176843493-7188e5dc-758b-4b7c-b0fa-f3fb62939ee2.JPG)
+	 
+   	- trating1 
+   	
+	 ![cassandra-query-trating1](https://user-images.githubusercontent.com/25034326/176843609-06849502-6342-4460-9994-4745840adaf7.JPG)
+	
+   	- basicwithrating1
+   	 
+	 ![cassandra-query-basicwithrating](https://user-images.githubusercontent.com/25034326/176843717-495470ae-7596-423b-9384-0086aa1403a7.JPG)
 
 
