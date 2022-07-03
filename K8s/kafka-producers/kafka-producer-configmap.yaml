@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafka-producer-config
+#  namespace: kafka
+  labels:
+    app: kafka-producer
+data:
+  application.properties: |+
+    server.port=7080
+    kafka.common.bootstrap.servers=${LOADBALANCER_IP}:9092
+    kafka.topic.title.basic.name=tbasic4
+    kafka.topic.title.basic.tsvFile.Path=/app/sample-data/temp-basics-data.tsv
+    kafka.topic.title.basic.groupId.prefix=tbasic4-consumer
+    kafka.topic.title.rating.name=trating4
+    kafka.topic.title.rating.tsvFile.Path=/app/sample-data/temp-rating-data.tsv
+    kafka.topic.title.rating.groupId.prefix=trating4-consumer
+    spring.jmx.enabled=true
+
+

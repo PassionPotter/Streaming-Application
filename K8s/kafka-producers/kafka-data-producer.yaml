@@ -1,0 +1,49 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: kafka-data-producer
+  labels:
+    app: kafka-producer
+spec:
+  selector:
+    matchLabels:
+      app: kafka-producer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kafka-producer
+    spec:
+      volumes:
+        - name: kafka-producer-props
+          configMap:
+            name: kafka-producer-config
+            items:
+              - key: application.properties
+                path: application.properties                
+      #  - name: kafka-produce-persistent-volume2
+      #    hostPath:
+      #      path: /run/desktop/mnt/host/e/kafka-producer-sample-data
+      #      type: Directory
+        - name: kafka-produce-persistent-volume
+          persistentVolumeClaim:
+            claimName: kafka-produce-volume-claim          
+      containers:
+        - name: kafka-producer
+          image: title-kafka-producer:t1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false  -Dcom.sun.management.jmxremote.port=7085  -Dcom.sun.management.jmxremote.rmi.port=7085  -Dcom.sun.management.jmxremote.host=0.0.0.0  -Djava.rmi.server.hostname=0.0.0.0"
+          ports:
+            - name: serverport
+              containerPort: 7080
+            - name: jmxport
+              containerPort: 7085     
+          volumeMounts:
+            - name: kafka-produce-persistent-volume
+              mountPath: /app/sample-data              
+            - name: kafka-producer-props
+              mountPath: /app/application.properties
+              readOnly: true
+              subPath: application.properties
