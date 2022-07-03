@@ -64,6 +64,29 @@ This sample data we will be using is referred from IMDb which is an online datab
 
 	* flink-jobmanager: Flink JobManager Standalone Job from the --job-classname passed
 
+### kafka-producer: ###
+  This folder includes the yaml files that creates kubernetes artifacts such as below
+* Config Maps:
+
+	*  kafka-producer-config : configurations for below
+	     application.properties
+	     
+* Persistent Volume and Persistent Volume claim:	     
+	
+	* kafka-produce-persistent-volume : PV for kafka data producer where load files can be accessed
+	
+	* kafka-produce-volume-claim: PVC for kafka data producer where load files can be accessed
+         
+* Services:
+
+	* kafka-producer-service: This service exposes kafka data producer spring boot services for variouse clients
+
+* Deployments:
+
+	* cassandra : deployment of kafka data producer spring boot application
+	
+	
+
 
 ## 3. Kafka data producer ##
 This Spring Boot project sends data to the distributed messaging server i.e. apache kafka. The data we send to the kafka topic is related to movies/series/episodes. The Kafka broker to which the data is being  sent will be the ultimate source of the data for this ETL project. This project have  the ways of data ingestion by exposing two different APIs
@@ -114,6 +137,15 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
     
        		kubectl create -f ../K8s/standalone-flink-job/flink-taskmanager-service.yaml
        		kubectl create -f ../K8s/standalone-flink-job/flink-jobmanager-service.yaml
+    
+    - Kafka Producer Service
+    		kubectl create -f ../K8s/kafka-producers/kafka-producer-configmap.yaml
+		kubectl create -f ../K8s/kafka-producers/kafka-produce-volume.yaml
+		kubectl create -f ../K8s/kafka-producers/kafka-data-produce-volumeclaim.yaml
+		kubectl create -f ../K8s/kafka-producers/kafka-data-producer-service.yaml
+		kubectl create -f ../K8s/kafka-producers/kafka-data-producer.yaml
+		
+		
 
 2. Create K8s Workloads
 
@@ -183,9 +215,9 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
 
 6. Maven Build "kafka-data-producer" and  Run  SpringBoot Application
     
-    	mvn clean package -DskipTests   	 
-
-    **Note: Docker Image and K8s deployment file will be available soon**
+   		mvn clean package -DskipTests   
+		../kafka-data-producer>docker build -f Dockerfile -t title-kafka-producer:t1 .
+    
 
 5. Maven Build "kafka-flink-consumer-cassandra-sink" and create docker image from docker file
     
@@ -242,5 +274,9 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
    	- basicwithrating1
    	 
 	 ![cassandra-query-basicwithrating](https://user-images.githubusercontent.com/25034326/176843717-495470ae-7596-423b-9384-0086aa1403a7.JPG)
+	 
+	 - kafka data producer JMC dashboard
+	 ![kafka-producer-jmc-dashboard](https://user-images.githubusercontent.com/25034326/177040725-72794dcd-637a-498e-8196-3f9c94d02a76.JPG)
+
 
 
