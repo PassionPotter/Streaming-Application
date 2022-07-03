@@ -1,0 +1,19 @@
+#
+# PersistentVolume
+#
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kafka-produce-persistent-volume
+  labels:
+    type: local
+spec:
+  storageClassName: hostpath
+  capacity:
+    storage: 256Mi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /run/desktop/mnt/host/e/kafka-producer-volume/kafka-producer-sample-data
+    type: Directory
+  persistentVolumeReclaimPolicy: Retain

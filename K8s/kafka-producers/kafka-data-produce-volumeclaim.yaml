@@ -1,0 +1,14 @@
+#
+# PersistentVolumeClaim
+#
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kafka-produce-volume-claim
+spec:
+  storageClassName: hostpath
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 256Mi
