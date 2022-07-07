@@ -161,10 +161,10 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
     - Kafka Producer Service
     
     		kubectl create -f ../K8s/kafka-producers/kafka-producer-configmap.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-produce-volume.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-data-produce-volumeclaim.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-data-producer-service.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-data-producer.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-produce-volume.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-data-produce-volumeclaim.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-data-producer-service.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-data-producer.yaml
 		
 		
 
