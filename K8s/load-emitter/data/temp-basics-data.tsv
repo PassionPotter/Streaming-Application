@@ -1,0 +1,9 @@
+tconst	titleType	primaryTitle	originalTitle	isAdult	startYear	endYear	runtimeMinutes	genres
+tt0099423	movie	Die Hard 2	Die Hard 2	0	1990	\\N	124	Action,Thriller
+tt0944947	tvSeries	Game of Thrones	Game of Thrones	0	2011	2019	57	Action,Adventure,Drama
+tt0108778	tvSeries	Friends	Friends	0	1994	2004	22	Comedy,Romance
+tt0903747	tvSeries	Breaking Bad	Breaking Bad	0	2008	2013	49	Crime,Drama,Thriller
+tt0198246	tvMiniSeries	The Stranger	The Stranger	0	1964	1965	30	Drama,Family,Sci-Fi
+tt0200529	tvSpecial	Chris Rock: Bring the Pain	Chris Rock: Bring the Pain	0	1996	\\N	58	Comedy
+tt0298725	tvMovie	Almost Forever	Almost Forever	0	1996	\\N	87	Drama
+tt0367110	movie	Swades	Swades: We, the People	0	2004	\\N	210	Drama,Musical
