@@ -55,7 +55,7 @@ public class TitlesCassandraSink {
 		String cassandraPass = System.getProperty("CASSANDRA_PASS", "cassandra");
 	*/	
 		properties.setProperty("bootstrap.servers", bootStrapServers);
-		properties.setProperty("group.id", "wordcount-" + newDate.getHours() + "-" + newDate.getMinutes());
+		properties.setProperty("group.id", "title-consumer");
 		properties.setProperty("auto.offset.reset", "earliest");
 
 	
