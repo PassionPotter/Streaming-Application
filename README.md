@@ -84,8 +84,28 @@ This sample data we will be using is referred from IMDb which is an online datab
 * Deployments:
 
 	* cassandra : deployment of kafka data producer spring boot application
-	
-	
+
+### load-emitter: ###
+It includes sample Jmeter jmx file for loading the data from same folder generting reports to result folder. sample bat file to run the jmeter file has been added.
+From the jmeter/bin folder it can be executed as below.
+		
+		jmeter -n -t Kafka-Data-Load.jmx
+
+### automation-script: ###
+It includes set of bash shell scripts to deploy and remove individual components of K8s artifacts. The primary bash shell script is clean-deployment.sh.
+Before running this from any server one must ensure below pre-requisites already installed
+
+	#install python
+	#sudo apt update && sudo apt install python2
+	#install java
+	#sudo apt-get install openjdk-8-jdk
+	# CQLSH PATH needs to be added to main clean-deployment.sh file
+	# download and use cqlsh from https://downloads.datastax.com/#cqlsh
+
+#### Note: one must add $$LOADBANACER_IP} and run the script
+	bash clean-deployment.sh
+
+
 
 
 ## 3. Kafka data producer ##
@@ -139,11 +159,12 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
        		kubectl create -f ../K8s/standalone-flink-job/flink-jobmanager-service.yaml
     
     - Kafka Producer Service
+    
     		kubectl create -f ../K8s/kafka-producers/kafka-producer-configmap.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-produce-volume.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-data-produce-volumeclaim.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-data-producer-service.yaml
-		kubectl create -f ../K8s/kafka-producers/kafka-data-producer.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-produce-volume.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-data-produce-volumeclaim.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-data-producer-service.yaml
+    		kubectl create -f ../K8s/kafka-producers/kafka-data-producer.yaml
 		
 		
 
@@ -246,37 +267,55 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
 * Kafka Records
 	
 	 -  tbasic4 
+
 	    
-	    ![kafka-consumer-tbasic4](https://user-images.githubusercontent.com/25034326/176841910-55ae02b7-41b6-4ef8-824f-a9f448c079c1.JPG)
-	    
+	    ![kafka-tbasic4](https://user-images.githubusercontent.com/25034326/177815859-ab383cb5-e63f-4dcf-b49b-bf3bddfda3ee.JPG)
+	    	    
 	 -  trating4 
 	    
-	    ![kafka-consumer-trating4](https://user-images.githubusercontent.com/25034326/176842929-2a533774-08a0-4ae2-b0a5-46bbb4eb1f35.JPG)
+	    ![kafka-trating4](https://user-images.githubusercontent.com/25034326/177816139-f29670c1-3bb6-4c21-9f02-4e910f7a795b.JPG)
+
+
+* Kafka-Data-Producer
+	
+	- load-emitter
+	
+	![jmeter-load-ingestion-aggregate-report](https://user-images.githubusercontent.com/25034326/177817195-bdef63a8-4a03-47e4-ae29-5bfe202a3416.JPG)
+	
+	
+	![jmeter-load-ingestion-summary-report](https://user-images.githubusercontent.com/25034326/177817335-9866a35b-b0b1-43b8-b871-0f0b1bb38332.JPG)
 
 	
+	- java mission control
+	
+	
+	![jmc-kafka-data-producer](https://user-images.githubusercontent.com/25034326/177817436-57abbf58-30cd-4e09-bd3f-b4c5d0813f5d.jpg)
+	
+	
+
 * Flink Dashboard
+
 	
 	- Data Flow From streaming Job
 	 
-	 ![Flink-DataFlow-Graph](https://user-images.githubusercontent.com/25034326/176843198-58c075c3-a41f-4631-8b9a-d6475a2a5723.JPG)
+	 ![flink-job-dashboard](https://user-images.githubusercontent.com/25034326/177816285-71733af0-bd68-4ae5-be2f-2c4dba12c151.JPG)
 
 
 * Cassandra Result
 	
    	- tbasic1  
    	
-   	 ![cassandra-query-tbasic1](https://user-images.githubusercontent.com/25034326/176843493-7188e5dc-758b-4b7c-b0fa-f3fb62939ee2.JPG)
+   	 ![cassandra-tbasic1](https://user-images.githubusercontent.com/25034326/177816475-ca7617ab-7dd6-4452-997a-f428516d4603.JPG)
+
 	 
    	- trating1 
-   	
-	 ![cassandra-query-trating1](https://user-images.githubusercontent.com/25034326/176843609-06849502-6342-4460-9994-4745840adaf7.JPG)
-	
+   		 
+	![cassandra-trating1](https://user-images.githubusercontent.com/25034326/177816628-f3c58eb9-4289-4430-99af-1c24965032b2.JPG)
+
    	- basicwithrating1
    	 
-	 ![cassandra-query-basicwithrating](https://user-images.githubusercontent.com/25034326/176843717-495470ae-7596-423b-9384-0086aa1403a7.JPG)
+	 ![cassandra-basicwithrating1](https://user-images.githubusercontent.com/25034326/177816708-db245ebd-b073-4594-838a-dadf2082f0f6.JPG)
 	 
-	 - kafka data producer JMC dashboard
-	 ![kafka-producer-jmc-dashboard](https://user-images.githubusercontent.com/25034326/177040725-72794dcd-637a-498e-8196-3f9c94d02a76.JPG)
 
 
 
