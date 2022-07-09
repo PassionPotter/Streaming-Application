@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS example.trating1 (
    	tconst text,
 	averageRating double,
 	numVotes bigint,   				
-   	PRIMARY KEY(averageRating)
+   	PRIMARY KEY(tconst)
 	);
 
 
