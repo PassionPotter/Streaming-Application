@@ -17,21 +17,21 @@ import com.learn.kafkadataproducer.constants.ApplicationConstants;
 import com.learn.kafkadataproducer.model.deserializer.TitleBasicDeserializer;
 import com.learn.models.TitleBasic;
 
-@Configuration
-@EnableKafka
+//@Configuration
+//@EnableKafka
 public class TitleBasicConsumerConfig {
 
 	
 
 	//consumer
 	@Bean
-	public ConsumerFactory<String, TitleBasic> customerConsumerFactory() {
+	public ConsumerFactory<String, TitleBasic> titleBasicConsumerFactory() {
 		Map<String, Object> configs = new HashMap<String, Object>();
 		configs.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, ApplicationConstants.KAFKA_LOCAL_SERVER_CONFIG);
 		//ConsumerConfig.
 		configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
 		configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TitleBasicDeserializer.class);
-	//	configs.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+		configs.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 		configs.put(JsonDeserializer.TRUSTED_PACKAGES, "com.learn.deserializer.*");
 
 		ConsumerFactory<String, TitleBasic> consumerFactory = new DefaultKafkaConsumerFactory<String, TitleBasic>(
@@ -43,7 +43,7 @@ public class TitleBasicConsumerConfig {
 	@Bean
 	public ConcurrentKafkaListenerContainerFactory<String, TitleBasic> tBasicKafkaListenerContainerFactory() {
 		ConcurrentKafkaListenerContainerFactory<String, TitleBasic> conccKafkaListContFac = new ConcurrentKafkaListenerContainerFactory<String, TitleBasic>();
-		conccKafkaListContFac.setConsumerFactory(customerConsumerFactory());
+		conccKafkaListContFac.setConsumerFactory(titleBasicConsumerFactory());
 		return conccKafkaListContFac;
 
 	}
