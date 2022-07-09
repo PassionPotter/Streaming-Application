@@ -267,30 +267,30 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
 * Kafka Records
 	
 	 -  tbasic4 
-
-	    
-	    ![kafka-tbasic4](https://user-images.githubusercontent.com/25034326/177815859-ab383cb5-e63f-4dcf-b49b-bf3bddfda3ee.JPG)
-	    	    
+	 
+	 
+	 ![kafka-consume-tbasic4](https://user-images.githubusercontent.com/25034326/178094028-5bb8457d-6402-4ede-a8f1-181290d9b188.JPG)
+  
+	    	    	    
 	 -  trating4 
-	    
-	    ![kafka-trating4](https://user-images.githubusercontent.com/25034326/177816139-f29670c1-3bb6-4c21-9f02-4e910f7a795b.JPG)
-
+	    	    
+	![kafka-consume-trating4](https://user-images.githubusercontent.com/25034326/178094058-2c284c3c-31ad-4364-b1a4-f70daead10fd.JPG)
+	
 
 * Kafka-Data-Producer
 	
 	- load-emitter
 	
-	![jmeter-load-ingestion-aggregate-report](https://user-images.githubusercontent.com/25034326/177817195-bdef63a8-4a03-47e4-ae29-5bfe202a3416.JPG)
+	![jmeter-aggregate-report](https://user-images.githubusercontent.com/25034326/178094089-2dcac9e9-c001-4f17-abfa-8d48b1a24adc.JPG)	
 	
 	
-	![jmeter-load-ingestion-summary-report](https://user-images.githubusercontent.com/25034326/177817335-9866a35b-b0b1-43b8-b871-0f0b1bb38332.JPG)
+	
+	![jmeter-summary-report](https://user-images.githubusercontent.com/25034326/178094102-b0d7f49d-9e0c-497d-a9ad-9b9aa41247be.JPG)
 
 	
 	- java mission control
 	
-	
-	![jmc-kafka-data-producer](https://user-images.githubusercontent.com/25034326/177817436-57abbf58-30cd-4e09-bd3f-b4c5d0813f5d.jpg)
-	
+	![jmc-kafka-producer](https://user-images.githubusercontent.com/25034326/178094115-18236d08-8e29-4bd4-b231-fa330beb9d66.png)
 	
 
 * Flink Dashboard
@@ -298,24 +298,26 @@ This Spring Boot project sends data to the distributed messaging server i.e. apa
 	
 	- Data Flow From streaming Job
 	 
-	 ![flink-job-dashboard](https://user-images.githubusercontent.com/25034326/177816285-71733af0-bd68-4ae5-be2f-2c4dba12c151.JPG)
+	 ![stand-alone-flink-job](https://user-images.githubusercontent.com/25034326/178094132-93e5caea-ebc1-48e4-9a5f-3fb2f7c3aab7.JPG)
 
 
 * Cassandra Result
+
 	
    	- tbasic1  
    	
-   	 ![cassandra-tbasic1](https://user-images.githubusercontent.com/25034326/177816475-ca7617ab-7dd6-4452-997a-f428516d4603.JPG)
+   	 ![cassandra-tbasic1](https://user-images.githubusercontent.com/25034326/178094157-4a9bc16f-6fc6-4606-a3c1-18c7b2aecef9.JPG)
 
 	 
    	- trating1 
-   		 
-	![cassandra-trating1](https://user-images.githubusercontent.com/25034326/177816628-f3c58eb9-4289-4430-99af-1c24965032b2.JPG)
+
+   	 ![cassandra-trating1](https://user-images.githubusercontent.com/25034326/178094181-4166d301-9b2d-4c54-bcba-4d6507323365.JPG)
+
+	
 
    	- basicwithrating1
    	 
-	 ![cassandra-basicwithrating1](https://user-images.githubusercontent.com/25034326/177816708-db245ebd-b073-4594-838a-dadf2082f0f6.JPG)
 	 
-
+	 ![cassandra-basicwithrating1](https://user-images.githubusercontent.com/25034326/178094187-4a12207a-1607-41c0-b653-971e917b4f5f.JPG)
 
 
