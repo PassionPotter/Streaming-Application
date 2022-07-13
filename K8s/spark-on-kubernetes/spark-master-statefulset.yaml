@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: local-spark-master
+spec:
+  replicas: 1
+  serviceName: local-spark-master
+  selector:
+    matchLabels:
+      app: local-spark-master # has to match .spec.template.metadata.labels
+  template:
+    metadata:
+      labels:
+        app: local-spark-master # has to match .spec.selector.matchLabels
+    spec:
+      #hostname: local-spark-master
+      containers:
+      - name: local-spark-master
+        image: bitnami/spark:3.0.0
+        imagePullPolicy: IfNotPresent # Always/IfNotPresent
+        env:
+        - name : SPARK_MODE
+          value: "master"            
+        ports:
+        - containerPort: 8080
+          name: http
+        - containerPort: 7077
+          name: cluster
+        livenessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 20                

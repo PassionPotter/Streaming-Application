@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: local-spark-worker
+spec:
+  replicas: 1
+  serviceName: local-spark-worker
+  selector:
+    matchLabels:
+      app: local-spark-worker # has to match .spec.template.metadata.labels
+  template:
+    metadata:
+      labels:
+        app: local-spark-worker # has to match .spec.selector.matchLabels
+    spec:
+      #hostname: local-spark-worker
+      containers:
+      - name: local-spark-worker
+        image: bitnami/spark:3.0.0
+        imagePullPolicy: IfNotPresent # Always/IfNotPresent
+        env:
+        - name : SPARK_MASTER_URL
+          value: "spark://local-spark-master-service:7077"
+        - name : SPARK_MODE
+          value: "worker"
+        ports:
+        - containerPort: 8081
+          name: http
+        livenessProbe:
+          tcpSocket:
+            port: 8081
+          initialDelaySeconds: 10
+          periodSeconds: 20                
