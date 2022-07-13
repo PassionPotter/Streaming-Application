@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: local-spark-master-service
+spec:
+  type: LoadBalancer
+  ports:
+    - name: cluster
+      port: 7077
+     # protocol: TCP
+     # targetPort: 7077
+    - name: http
+      port: 8080
+      #protocol: TCP
+      #targetPort: 8080
+  selector:
+    app: local-spark-master

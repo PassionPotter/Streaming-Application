@@ -1,0 +1,243 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1657293754765,2767,Load Title Basic API,200,,BasicAndRatingLoader 1-2,text,true,,191,444,2,2,http://localhost:7080/produce/title/basic,2767,0,7
+1657293747209,10296,Load Title Basic API,200,,BasicAndRatingLoader 1-1,text,true,,191,424,2,2,http://localhost:7080/produce/title/basic,10295,0,193
+1657293757546,237,Load Title Rating API,200,,BasicAndRatingLoader 1-1,text,true,,192,252,2,2,http://localhost:7080/produce/title/rating,237,0,0
+1657293757543,266,Load Title Rating API,200,,BasicAndRatingLoader 1-2,text,true,,192,253,2,2,http://localhost:7080/produce/title/rating,266,0,0
+1657293757819,43,Load Title Basic API,200,,BasicAndRatingLoader 1-2,text,true,,191,436,2,2,http://localhost:7080/produce/title/basic,43,0,0
+1657293757865,72,Load Title Rating API,200,,BasicAndRatingLoader 1-2,text,true,,192,253,2,2,http://localhost:7080/produce/title/rating,72,0,0
+1657293757799,157,Load Title Basic API,200,,BasicAndRatingLoader 1-1,text,true,,191,420,2,2,http://localhost:7080/produce/title/basic,157,0,0
+1657293757954,43,Load Title Basic API,200,,BasicAndRatingLoader 1-2,text,true,,191,439,2,2,http://localhost:7080/produce/title/basic,43,0,0
+1657293757959,70,Load Title Rating API,200,,BasicAndRatingLoader 1-1,text,true,,192,252,2,2,http://localhost:7080/produce/title/rating,70,0,0
+1657293758000,31,Load Title Rating API,200,,BasicAndRatingLoader 1-2,text,true,,192,248,2,2,http://localhost:7080/produce/title/rating,31,0,0
+1657293758066,37,Load Title Basic API,200,,BasicAndRatingLoader 1-2,text,true,,191,423,2,2,http://localhost:7080/produce/title/basic,37,0,0
+1657293758046,72,Load Title Basic API,200,,BasicAndRatingLoader 1-1,text,true,,191,450,2,2,http://localhost:7080/produce/title/basic,72,0,0
+1657293758106,62,Load Title Rating API,200,,BasicAndRatingLoader 1-2,text,true,,192,248,2,2,http://localhost:7080/produce/title/rating,62,0,0
+1657293758120,53,Load Title Rating API,200,,BasicAndRatingLoader 1-1,text,true,,192,250,2,2,http://localhost:7080/produce/title/rating,51,0,0
+1657293758182,58,Load Title Basic API,200,,BasicAndRatingLoader 1-1,text,true,,191,430,1,1,http://localhost:7080/produce/title/basic,58,0,0
+1657293758243,62,Load Title Rating API,200,,BasicAndRatingLoader 1-1,text,true,,192,251,1,1,http://localhost:7080/produce/title/rating,62,0,0
+1657550640764,4175,Read title Basic filter Within Query,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:7080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",BasicAndRatingReader 1-1,text,false,,2741,0,1,1,http://localhost:7080/titleBasicDataWithQuery,0,0,4174
+1657550665007,4075,Read title Basic filter API,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:7080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",BasicAndRatingReader 1-1,text,false,,2741,0,1,1,http://localhost:7080/titleBasicData,0,0,4075
+1657550689098,4071,Load Title Basic And Rating filter Within query,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:7080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",BasicAndRatingReader 1-1,text,false,,2741,0,1,1,http://localhost:7080/titleDataWithQuery,0,0,4071
+1657550713175,1434,Load Title Basic And Rating API,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket operation on nonsocket: connect,BasicAndRatingReader 1-1,text,false,,2446,0,1,1,http://localhost:7080/titleData,0,0,1434
+1657550757249,11573,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,460,243,1,1,http://localhost:6060/titleBasicDataWithQuery,11545,0,6
+1657550788846,18474,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,460,165,1,1,http://localhost:6060/titleBasicData,18427,0,0
+1657550827376,16723,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,16679,0,28
+1657550864176,7828,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,7828,0,0
+1657551234689,55173,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,55152,0,9
+1657551309896,3523,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,3521,0,8
+1657551333442,23968,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,23958,0,0
+1657551377427,19310,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,19309,0,13
+1657551564286,0,wordcount api,Non HTTP response code: java.net.URISyntaxException,"Non HTTP response message: Illegal character in query at index 38: http://localhost:6060/wordcount?words=""addsad""",BasicAndRatingReader 1-1,text,false,,1134,0,1,1,"http://localhost:6060/wordcount?words=""addsad""",0,0,0
+1657551652820,611,wordcount api,405,,BasicAndRatingReader 1-1,text,false,,305,174,1,1,http://localhost:6060/wordcount?words=sdsfdds,608,0,14
+1657551673453,2424,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,2423,0,0
+1657551695887,1438,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1435,0,0
+1657551717349,16574,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,16571,0,9
+1657551754003,9804,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,9800,0,0
+1657551933793,474,wordcount api,405,,BasicAndRatingReader 1-1,text,false,,305,174,1,1,http://localhost:6060/wordcount?words=sdsfdds,470,0,12
+1657551954289,44706,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,5106,243,1,1,http://localhost:6060/titleBasicDataWithQuery,44701,0,0
+1657552019012,8796,Read title Basic filter API,500,,BasicAndRatingReader 1-1,text,false,,5097,165,1,1,http://localhost:6060/titleBasicData,8796,0,7
+1657552147151,613,wordcount api,405,,BasicAndRatingReader 1-1,text,false,,305,174,1,1,http://localhost:6060/wordcount?words=sdsfdds,606,0,4
+1657552167772,50447,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,5106,243,1,1,http://localhost:6060/titleBasicDataWithQuery,50434,0,0
+1657552239060,3606,Read title Basic filter API,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,BasicAndRatingReader 1-1,text,false,,2441,0,1,1,http://localhost:6060/titleBasicData,0,0,42
+1657552262889,4085,Load Title Basic And Rating filter Within query,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:6060 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",BasicAndRatingReader 1-1,text,false,,2741,0,1,1,http://localhost:6060/titleDataWithQuery,0,0,4085
+1657552287053,4154,Load Title Basic And Rating API,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:6060 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",BasicAndRatingReader 1-1,text,false,,2741,0,1,1,http://localhost:6060/titleData,0,0,4153
+1657552386718,13180,wordcount api,200,,BasicAndRatingReader 1-1,text,true,,151,174,1,1,http://localhost:6060/wordcount?words=sdsfdds,13175,0,14
+1657552419933,49985,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,5106,243,1,1,http://localhost:6060/titleBasicDataWithQuery,49979,0,0
+1657552490045,3376,Read title Basic filter API,500,,BasicAndRatingReader 1-1,text,false,,5097,165,1,1,http://localhost:6060/titleBasicData,3375,0,29
+1657552513437,7497,Load Title Basic And Rating filter Within query,500,,BasicAndRatingReader 1-1,text,false,,4417,274,1,1,http://localhost:6060/titleDataWithQuery,7495,0,3
+1657552540972,6829,Load Title Basic And Rating API,500,,BasicAndRatingReader 1-1,text,false,,4408,160,1,1,http://localhost:6060/titleData,6828,0,8
+1657552719513,10901,wordcount api,200,,BasicAndRatingReader 1-1,text,true,,151,174,1,1,http://localhost:6060/wordcount?words=sdsfdds,10895,0,19
+1657552750437,51916,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,51912,0,0
+1657552822512,4591,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,4579,0,93
+1657552847135,15308,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,15306,0,0
+1657552882461,19134,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,19131,0,0
+1657552963405,2802,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,2797,0,11
+1657552986222,1382,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1382,0,0
+1657553007608,16111,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,16107,0,0
+1657553043732,27844,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,27811,0,8
+1657553091604,1724,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1723,0,0
+1657553113346,1147,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1146,0,21
+1657553134501,5880,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5879,0,0
+1657553160386,7679,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,7676,0,0
+1657553188102,1134,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1134,0,5
+1657553209244,1104,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1103,0,0
+1657553230364,6679,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,6672,0,0
+1657553257050,6384,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6380,0,6
+1657553283451,1064,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1064,0,0
+1657553304533,1306,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1305,0,0
+1657553325846,7827,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,7816,0,7
+1657553353689,6178,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6177,0,0
+1657553379880,1724,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1723,0,0
+1657553401639,876,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,876,0,10
+1657553422530,5198,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5198,0,0
+1657553447735,6384,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6380,0,0
+1657553474133,1927,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1925,0,5
+1657553496080,1863,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1862,0,0
+1657553517950,7053,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,7044,0,0
+1657553545007,6297,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6286,0,3
+1657553571365,989,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,989,0,0
+1657553592365,776,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,775,0,0
+1657553613145,5716,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5716,0,7
+1657553638876,6015,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6014,0,0
+1657553664915,1010,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1009,0,0
+1657553685937,852,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,851,0,3
+1657553706791,5081,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5080,0,0
+1657553731887,5942,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,5926,0,0
+1657553757849,1106,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1103,0,12
+1657553778968,859,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,858,0,0
+1657553799834,5079,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5079,0,0
+1657553824927,4904,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,4899,0,5
+1657553849850,768,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,766,0,0
+1657553870637,1251,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1248,0,0
+1657556788455,18698,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,18684,0,141
+1657556827311,6695,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6676,0,0
+1657602644013,85112,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,85086,0,33
+1657602729662,6589,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,6587,0,76
+1657602736265,48295,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,48230,0,0
+1657602785176,19374,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,19373,0,0
+1657602805461,4194,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,4192,0,140
+1657602809667,1400,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1399,0,0
+1657602811069,11235,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,11235,0,0
+1657602822311,14523,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,14512,0,0
+1657602836968,4340,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,4339,0,0
+1657602841314,1178,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1177,0,0
+1657602842495,8712,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,8711,0,0
+1657602851209,9092,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,9087,0,0
+1657602860318,1506,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1505,0,0
+1657602861976,1364,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1362,0,0
+1657602863342,11354,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,11307,0,0
+1657602874698,10041,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,10039,0,84
+1657602885343,7725,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,7723,0,0
+1657602893087,4015,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,4005,0,0
+1657602897157,11058,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,11054,0,0
+1657602908229,17101,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,17099,0,0
+1657602925678,2960,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,2959,0,0
+1657602928651,3398,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,3397,0,0
+1657602932050,9790,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,9790,0,0
+1657602941843,12029,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,12029,0,150
+1657602953885,1199,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1198,0,0
+1657602955094,1776,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1775,0,0
+1657602956873,7697,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,7696,0,0
+1657602964570,8989,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,8989,0,0
+1657602973585,2163,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,2159,0,0
+1657602976185,2492,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,2491,0,0
+1657602978679,9056,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,9055,0,0
+1657602987741,6923,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6922,0,0
+1657602995226,1536,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1531,0,0
+1657602996778,2494,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,2494,0,0
+1657602999275,22815,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,22762,0,0
+1657603022100,12484,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,12465,0,176
+1657603035112,3584,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,3584,0,0
+1657603038751,1485,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1484,0,0
+1657603040238,7334,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,7330,0,0
+1657603047580,7318,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,7317,0,0
+1657603361825,5584,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,5565,0,17
+1657603367426,1229,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1229,0,0
+1657603368656,8150,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,8150,0,0
+1657603376809,8319,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,8319,0,0
+1657603385308,2278,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,2277,0,0
+1657603387601,1293,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1292,0,0
+1657603388896,9548,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,9546,0,0
+1657603398474,7269,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,7269,0,0
+1657603405763,5436,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,5436,0,0
+1657603411203,1222,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1220,0,0
+1657603412426,6146,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,6146,0,0
+1657603418575,5844,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,5844,0,0
+1657603424429,3073,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,3050,0,193
+1657603427550,1022,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1021,0,0
+1657603428573,7734,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,7733,0,0
+1657603436309,8590,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,8590,0,0
+1657603444958,1598,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1597,0,0
+1657603446567,1820,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1820,0,0
+1657603448390,6674,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,6673,0,0
+1657603455065,9473,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,9468,0,0
+1657603464549,1372,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1371,0,0
+1657603465929,901,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,900,0,0
+1657603466831,7832,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,7832,0,0
+1657603474666,6594,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6575,0,0
+1657603481467,2164,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,2164,0,0
+1657603483633,998,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,997,0,0
+1657603484633,8884,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,8858,0,110
+1657603493519,7151,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,7151,0,0
+1657603500703,1599,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1596,0,0
+1657603502319,1134,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1133,0,0
+1657603503455,5289,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5289,0,0
+1657603508748,7848,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,7847,0,0
+1657603516606,1435,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1434,0,0
+1657603518058,1401,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1401,0,0
+1657603519460,5506,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5505,0,0
+1657603524970,6852,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,6851,0,0
+1657603531837,1670,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1670,0,0
+1657603533516,928,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,927,0,0
+1657603534445,5949,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5948,0,0
+1657603540395,8576,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,8475,0,0
+1657606011419,66018,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,783,243,1,1,http://localhost:6060/titleBasicDataWithQuery,65798,0,58
+1657606081122,8479,Read title Basic filter API,500,,BasicAndRatingReader 1-1,text,false,,774,165,1,1,http://localhost:6060/titleBasicData,8478,0,1406
+1657606089613,5434,Load Title Basic And Rating filter Within query,500,,BasicAndRatingReader 1-1,text,false,,777,274,1,1,http://localhost:6060/titleDataWithQuery,5434,0,24
+1657606095055,5502,Load Title Basic And Rating API,500,,BasicAndRatingReader 1-1,text,false,,769,160,1,1,http://localhost:6060/titleData,5502,0,1
+1657606252332,345891,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,345840,0,91
+1657606599203,13488,Read title Basic filter API,500,,BasicAndRatingReader 1-1,text,false,,412,165,1,1,http://localhost:6060/titleBasicData,13486,0,144
+1657606612713,83443,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,83414,0,21
+1657606696437,545937,Load Title Basic And Rating API,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,BasicAndRatingReader 1-1,text,false,,2556,0,1,1,http://localhost:6060/titleData,0,0,158
+1657607287843,82234,Read title Basic filter Within Query,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,BasicAndRatingReader 1-1,text,false,,2556,0,1,1,http://localhost:6060/titleBasicDataWithQuery,0,0,41
+1657607468392,34980,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,783,243,1,1,http://localhost:6060/titleBasicDataWithQuery,34966,0,27
+1657607503786,166791,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,166753,0,49
+1657607670957,117756,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,117726,0,158
+1657607788951,304492,Load Title Basic And Rating API,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,BasicAndRatingReader 1-1,text,false,,2556,0,1,1,http://localhost:6060/titleData,0,0,219
+1657608103705,76801,Read title Basic filter Within Query,Non HTTP response code: java.net.SocketException,Non HTTP response message: Socket closed,BasicAndRatingReader 1-1,text,false,,2556,0,1,1,http://localhost:6060/titleBasicDataWithQuery,0,0,67
+1657608830625,38834,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,783,243,1,1,http://localhost:6060/titleBasicDataWithQuery,38717,0,57
+1657608870812,6225,Read title Basic filter API,500,,BasicAndRatingReader 1-1,text,false,,774,165,1,1,http://localhost:6060/titleBasicData,6222,0,159
+1657608877053,5691,Load Title Basic And Rating filter Within query,500,,BasicAndRatingReader 1-1,text,false,,778,274,1,1,http://localhost:6060/titleDataWithQuery,5690,0,10
+1657608882748,5650,Load Title Basic And Rating API,500,,BasicAndRatingReader 1-1,text,false,,769,160,1,1,http://localhost:6060/titleData,5650,0,2
+1657609069621,15350,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,775,243,1,1,http://localhost:6060/titleBasicDataWithQuery,15346,0,113
+1657609085018,9359,Read title Basic filter API,Non HTTP response code: java.net.SocketException,Non HTTP response message: Connection reset,BasicAndRatingReader 1-1,text,false,,2441,0,1,1,http://localhost:6060/titleBasicData,0,0,5
+1657609094483,4686,Load Title Basic And Rating filter Within query,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:6060 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",BasicAndRatingReader 1-1,text,false,,2741,0,1,1,http://localhost:6060/titleDataWithQuery,0,0,4686
+1657609099185,4122,Load Title Basic And Rating API,Non HTTP response code: org.apache.http.conn.HttpHostConnectException,"Non HTTP response message: Connect to localhost:6060 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect",BasicAndRatingReader 1-1,text,false,,2741,0,1,1,http://localhost:6060/titleData,0,0,4121
+1657609399731,36279,Read title Basic filter Within Query,500,,BasicAndRatingReader 1-1,text,false,,783,243,1,1,http://localhost:6060/titleBasicDataWithQuery,36183,0,63
+1657609437527,7107,Read title Basic filter API,500,,BasicAndRatingReader 1-1,text,false,,773,165,1,1,http://localhost:6060/titleBasicData,7106,0,456
+1657609444649,5402,Load Title Basic And Rating filter Within query,500,,BasicAndRatingReader 1-1,text,false,,778,274,1,1,http://localhost:6060/titleDataWithQuery,5401,0,31
+1657609450061,5373,Load Title Basic And Rating API,500,,BasicAndRatingReader 1-1,text,false,,769,160,1,1,http://localhost:6060/titleData,5373,0,3
+1657611809470,44797,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,44782,0,71
+1657611854297,2577,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,2576,0,0
+1657611856875,14055,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,14044,0,0
+1657611870932,8233,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,8231,0,3
+1657611905503,1522,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1521,0,2
+1657611907038,872,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,871,0,0
+1657611907912,5388,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,5387,0,0
+1657611913301,4875,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,4875,0,0
+1657611918182,860,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,859,0,0
+1657611919047,986,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,986,0,0
+1657611920034,3922,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,3919,0,0
+1657611923957,5074,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,5073,0,0
+1657611929036,1485,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,1485,0,0
+1657611930528,1009,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1008,0,0
+1657611931540,4649,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,4647,0,0
+1657611936190,4525,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,4524,0,0
+1657611940721,788,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,787,0,0
+1657611941530,770,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,768,0,0
+1657611942301,4342,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,4340,0,0
+1657611946643,5119,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,5119,0,0
+1657611951770,863,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,861,0,0
+1657611952641,1009,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,1008,0,0
+1657611953651,4140,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,4140,0,0
+1657611957792,4772,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,4771,0,0
+1657611962570,695,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,694,0,0
+1657611963270,708,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,707,0,0
+1657611963979,4637,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,4637,0,0
+1657611968618,5567,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,5566,0,2
+1657611974190,692,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,691,0,0
+1657611974893,884,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,882,0,0
+1657611975778,3258,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,3256,0,0
+1657611979038,3338,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,3338,0,0
+1657611982382,902,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,900,0,0
+1657611983289,823,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,822,0,0
+1657611984113,3505,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,3505,0,0
+1657611987620,2954,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,2954,0,0
+1657611990583,535,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,534,0,0
+1657611991125,557,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,556,0,0
+1657611991683,2727,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,2712,0,0
+1657611994411,3089,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,3087,0,0
+1657611997505,460,Read title Basic filter Within Query,200,,BasicAndRatingReader 1-1,text,true,,375,243,1,1,http://localhost:6060/titleBasicDataWithQuery,458,0,0
+1657611997985,450,Read title Basic filter API,200,,BasicAndRatingReader 1-1,text,true,,375,165,1,1,http://localhost:6060/titleBasicData,449,0,0
+1657611998436,2849,Load Title Basic And Rating filter Within query,200,,BasicAndRatingReader 1-1,text,true,,442,274,1,1,http://localhost:6060/titleDataWithQuery,2848,0,0
+1657612001286,3109,Load Title Basic And Rating API,200,,BasicAndRatingReader 1-1,text,true,,460,160,1,1,http://localhost:6060/titleData,3109,0,0

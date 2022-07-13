@@ -1,0 +1,1 @@
+jmeter -n -t Cassandra-Data-Reader.jmx
